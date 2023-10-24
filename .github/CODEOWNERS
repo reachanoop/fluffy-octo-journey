@@ -1,0 +1,24 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @anoopadvaitha will be requested for
+# review when someone opens a pull request.
+*       @anoopadvaitha
+
+# Order is important; the last matching pattern takes the most
+# precedence. When someone opens a pull request that only
+# modifies JS files, only @reachanoop and not the global
+# owner(s) will be requested for a review.
+*.js    @reachanoop
+
+# Teams can be specified as code owners as well. Teams should
+# be identified in the format @org/team-name. Teams must have
+# explicit write access to the repository. In this example,
+# the automation team in the lascon-security-safari organization owns all .txt files.
+/automation @lascon-security-safari/automation
+
+# In this example, any change inside the `/scripts` directory
+# will require approval from @ragashreeshekar or @reachanoop.
+/client/ @ragashreeshekar @reachanoop
